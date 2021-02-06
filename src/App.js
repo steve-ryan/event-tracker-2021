@@ -1,9 +1,18 @@
+import { Router } from "@reach/router";
+import About from "./About";
+import "./App.css";
+import Header from "./components/Header/Header";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <h1>idiot</h1>
-      </header>
+    <div className="app">
+      <Header />
+      <main>
+        <Router>
+          {/* <Home path="/" /> */}
+          <About path="/about" />
+        </Router>
+      </main>
     </div>
   );
 }
